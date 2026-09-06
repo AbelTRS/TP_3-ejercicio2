@@ -53,18 +53,18 @@
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="52" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="68" max="-2" attributes="0"/>
                   <Component id="pnlcentral" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="87" max="32767" attributes="0"/>
+                  <EmptySpace pref="71" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" attributes="0">
-                  <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
-                  <Component id="pnlcentral" max="32767" attributes="0"/>
+              <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
+                  <Component id="pnlcentral" max="32767" attributes="0"/>
+                  <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -84,7 +84,7 @@
                       <EmptySpace pref="27" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="1" attributes="0">
-                              <Component id="txtingreso" min="-2" pref="71" max="-2" attributes="0"/>
+                              <Component id="txtBox" min="-2" pref="71" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="94" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="1" attributes="0">
@@ -110,7 +110,7 @@
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="62" max="-2" attributes="0"/>
-                      <Component id="btnConvertir" min="-2" pref="148" max="-2" attributes="0"/>
+                      <Component id="btnConvert" min="-2" pref="148" max="-2" attributes="0"/>
                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                   </Group>
               </Group>
@@ -123,7 +123,7 @@
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="lblpedido" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="txtingreso" min="-2" pref="31" max="-2" attributes="0"/>
+                      <Component id="txtBox" min="-2" pref="31" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="rbtnFahrenheit" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -135,7 +135,7 @@
                           <Component id="rbtnRadianes" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace pref="20" max="32767" attributes="0"/>
-                      <Component id="btnConvertir" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnConvert" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -183,9 +183,9 @@
                 <Property name="text" type="java.lang.String" value="Ingrese temperatura en Grados"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="txtingreso">
+            <Component class="javax.swing.JTextField" name="txtBox">
             </Component>
-            <Component class="javax.swing.JButton" name="btnConvertir">
+            <Component class="javax.swing.JButton" name="btnConvert">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="14" style="3"/>
@@ -196,7 +196,7 @@
                 <Property name="text" type="java.lang.String" value="Convertir"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnConvertirActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnConvertActionPerformed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JRadioButton" name="rbtnFahrenheit">
@@ -218,7 +218,7 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="12" style="1"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="A Celcius"/>
+                <Property name="text" type="java.lang.String" value="A Celsius"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="rbtnKelvin">

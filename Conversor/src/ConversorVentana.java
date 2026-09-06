@@ -5,18 +5,23 @@
 
 /**
  *
- * @author Usuario
- */
-public class JFrame extends javax.swing.JFrame {
     
-    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(JFrame.class.getName());
+ */
+ import javax.swing.JOptionPane;
+ 
+public class ConversorVentana extends javax.swing.JFrame {
+    
+
+    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(ConversorVentana.class.getName());
+            
 
     /**
      * Creates new form JFrame
      */
-    public JFrame() {
+    public ConversorVentana() {
         initComponents();
         this.setLocationRelativeTo(null);
+
     }
 
     /**
@@ -37,8 +42,8 @@ public class JFrame extends javax.swing.JFrame {
         pnlconversor = new javax.swing.JPanel();
         lblconversor = new javax.swing.JLabel();
         lblpedido = new javax.swing.JLabel();
-        txtingreso = new javax.swing.JTextField();
-        btnConvertir = new javax.swing.JButton();
+        txtBox = new javax.swing.JTextField();
+        btnConvert = new javax.swing.JButton();
         rbtnFahrenheit = new javax.swing.JRadioButton();
         rbtnCelcius = new javax.swing.JRadioButton();
         rbtnKelvin = new javax.swing.JRadioButton();
@@ -74,10 +79,10 @@ public class JFrame extends javax.swing.JFrame {
         lblpedido.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         lblpedido.setText("Ingrese temperatura en Grados");
 
-        btnConvertir.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
-        btnConvertir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/imagenes/icons8-aprobar-y-actualizar-48.png"))); // NOI18N
-        btnConvertir.setText("Convertir");
-        btnConvertir.addActionListener(this::btnConvertirActionPerformed);
+        btnConvert.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
+        btnConvert.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/imagenes/icons8-aprobar-y-actualizar-48.png"))); // NOI18N
+        btnConvert.setText("Convertir");
+        btnConvert.addActionListener(this::btnConvertActionPerformed);
 
         buttonGroup1.add(rbtnFahrenheit);
         rbtnFahrenheit.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
@@ -85,7 +90,7 @@ public class JFrame extends javax.swing.JFrame {
 
         buttonGroup1.add(rbtnCelcius);
         rbtnCelcius.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        rbtnCelcius.setText("A Celcius");
+        rbtnCelcius.setText("A Celsius");
 
         buttonGroup1.add(rbtnKelvin);
         rbtnKelvin.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
@@ -104,7 +109,7 @@ public class JFrame extends javax.swing.JFrame {
                 .addContainerGap(27, Short.MAX_VALUE)
                 .addGroup(pnlcentralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlcentralLayout.createSequentialGroup()
-                        .addComponent(txtingreso, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txtBox, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(94, 94, 94))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlcentralLayout.createSequentialGroup()
                         .addGroup(pnlcentralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -122,7 +127,7 @@ public class JFrame extends javax.swing.JFrame {
                         .addGap(17, 17, 17))))
             .addGroup(pnlcentralLayout.createSequentialGroup()
                 .addGap(62, 62, 62)
-                .addComponent(btnConvertir, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnConvert, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         pnlcentralLayout.setVerticalGroup(
@@ -133,7 +138,7 @@ public class JFrame extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(lblpedido)
                 .addGap(18, 18, 18)
-                .addComponent(txtingreso, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txtBox, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(pnlcentralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(rbtnFahrenheit)
@@ -143,7 +148,7 @@ public class JFrame extends javax.swing.JFrame {
                     .addComponent(rbtnKelvin)
                     .addComponent(rbtnRadianes))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 20, Short.MAX_VALUE)
-                .addComponent(btnConvertir)
+                .addComponent(btnConvert)
                 .addGap(7, 7, 7))
         );
 
@@ -154,16 +159,16 @@ public class JFrame extends javax.swing.JFrame {
         jDesktopPane1Layout.setHorizontalGroup(
             jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jDesktopPane1Layout.createSequentialGroup()
-                .addGap(52, 52, 52)
+                .addGap(68, 68, 68)
                 .addComponent(pnlcentral, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(87, Short.MAX_VALUE))
+                .addContainerGap(71, Short.MAX_VALUE))
         );
         jDesktopPane1Layout.setVerticalGroup(
             jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jDesktopPane1Layout.createSequentialGroup()
-                .addGap(14, 14, 14)
+                .addContainerGap()
                 .addComponent(pnlcentral, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+                .addGap(14, 14, 14))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -180,9 +185,30 @@ public class JFrame extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnConvertirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConvertirActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnConvertirActionPerformed
+    private void btnConvertActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConvertActionPerformed
+        try {
+        double Tcelsius = Double.parseDouble(txtBox.getText());
+        double resultado = 0;
+        
+        if(rbtnFahrenheit.isSelected()){
+            resultado = (Tcelsius * 9 / 5) + 32;
+            JOptionPane.showMessageDialog(this,"La temperatura en grados FAHRENHEIT es: "+resultado);
+        }else if (rbtnKelvin.isSelected()){
+            resultado = Tcelsius + 273.15;
+            JOptionPane.showMessageDialog(this,"La temperatura en grados KELVIN es: " +resultado);
+        }else if (rbtnRadianes.isSelected()){
+            resultado = (Tcelsius * 9 / 5) + 491.67;
+            JOptionPane.showMessageDialog(this,"La temperatura en grados Radianes es: " +resultado);
+        }else if (rbtnCelcius.isSelected()){
+            resultado = Tcelsius ;
+            JOptionPane.showMessageDialog(this,"La temperatura en grados Celsius es: " +resultado);
+        }else{
+        JOptionPane.showMessageDialog(this, "Por favor, seleccione una unidad de destino.");
+        }
+        }catch(NumberFormatException e){
+        JOptionPane.showMessageDialog(this,"Por favor ingrese un numero valido");
+        }
+    }//GEN-LAST:event_btnConvertActionPerformed
 
     private void rbtnKelvinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbtnKelvinActionPerformed
         // TODO add your handling code here:
@@ -210,11 +236,11 @@ public class JFrame extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(() -> new JFrame().setVisible(true));
+        java.awt.EventQueue.invokeLater(() -> new ConversorVentana().setVisible(true));
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnConvertir;
+    private javax.swing.JButton btnConvert;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.ButtonGroup buttonGroup2;
     private javax.swing.ButtonGroup buttonGroup3;
@@ -228,6 +254,6 @@ public class JFrame extends javax.swing.JFrame {
     private javax.swing.JRadioButton rbtnFahrenheit;
     private javax.swing.JRadioButton rbtnKelvin;
     private javax.swing.JRadioButton rbtnRadianes;
-    private javax.swing.JTextField txtingreso;
+    private javax.swing.JTextField txtBox;
     // End of variables declaration//GEN-END:variables
 }
